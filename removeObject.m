@@ -1,6 +1,7 @@
 clc; clear;
 img = imread('gp.jpg');
 img = double(img);
+rows = size(img, 1); cols = size(img, 2);
 figure, imshow(img/255);
 
 rem = images.roi.AssistedFreehand('Closed',true,'Color','r');
