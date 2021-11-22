@@ -12,8 +12,8 @@ function reduced_img = SeamCarveDP(output_size, img, Pmask, Etype)
                 [img, seamEnergy, min_seam_loc, Pmask] = removeVerticalFE(energy, img, Pmask);
             else
                 [img, seamEnergy, min_seam_loc, Pmask] = removeVerticalBE(energy, img, Pmask);
+            end  
             colDiff = colDiff-1;
-            end        
         elseif(rowDiff>0)
             if(Etype=='FE')
                 [img, seamEnergy, min_seam_loc, Pmask] = removeHorizontalFE(energy, img, Pmask);

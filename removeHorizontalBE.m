@@ -83,6 +83,4 @@ function [newImg, seamEnergy, min_seam_loc, newPmask] = removeHorizontalBE(energ
     for j=1:size(mask,2)
         newPmask(:,j) = Pmask(mask(:,j),j);
     end
-    
-    temp = sum(newPmask, 'all')
 end
